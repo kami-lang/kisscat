@@ -1,0 +1,3 @@
+[submodule "engine/r8"]
+	path = engine/r8
+	url = https://github.com/kami-lang/kiss-r8.git
