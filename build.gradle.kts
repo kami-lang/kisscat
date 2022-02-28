@@ -26,10 +26,4 @@ subprojects {
   dokka(DokkaFormat.Html) {
     outputDirectory.set(rootDir.resolve("docs/apis"))
   }
-  afterEvaluate {
-    if (project.path != Projects.Mio && configurations.names.contains("api")) {
-      dependencies.apiProject(Projects.Mio)
-    }
-  }
-  kotlinExplicitApi()
 }
