@@ -34,7 +34,7 @@ import kotlin.io.path.setLastModifiedTime
 /**
  * The path backend implement with [NioPath].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @Suppress("NewApi", "UNCHECKED_CAST", "EqualsOrHashCode")
 internal abstract class PathImpl<Self : IPath<Self>>(chars: CharSequence) :

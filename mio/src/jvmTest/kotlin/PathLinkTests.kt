@@ -3,7 +3,7 @@ import io.kotest.core.spec.style.FreeSpec
 import io.kotest.engine.spec.tempdir
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 class PathLinkTests : FreeSpec({
   val tempDir = tempdir().toMioPath()

@@ -5,7 +5,7 @@ import com.meowool.kisscat.Modifier
 /**
  * [Modifier.applicable]
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @InternalKisscatApi
 public object ModifierApplicable {

@@ -11,7 +11,7 @@ import java.nio.ByteOrder as NioByteOrder
 /**
  * A big buffer similar to [ByteArrayBuilder].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 internal class ByteArrayBuffer(private val capacity: Long = 1024) : DataBuffer<ByteArrayBuffer> {
   private var value: BigByteArray = BigByteArray(capacity)

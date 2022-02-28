@@ -8,7 +8,7 @@ import com.meowool.mio.ChannelEmptyException
  * This is best explained by analogy. Imagine you're in a terminal, the highlighted cursor is the
  * data position of the channel you are currently accessing.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface DataChannelCursor {
 
@@ -226,7 +226,7 @@ interface DataChannelCursor {
  *
  * @see kotlin.apply
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 inline fun DataChannelCursor.applyTemporarily(block: DataChannelCursor.() -> Unit): DataChannelCursor =
   remember().apply(block).restore()
@@ -241,7 +241,7 @@ inline fun DataChannelCursor.applyTemporarily(block: DataChannelCursor.() -> Uni
  *
  * @see kotlin.run
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 inline fun <R> DataChannelCursor.runTemporarily(block: DataChannelCursor.() -> R): R =
   remember().block().also { restore() }

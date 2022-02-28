@@ -6,7 +6,7 @@ package com.meowool.kisscat.code
  * [JVM reference](https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-4.html#jvms-4.4)
  * [Dalvik reference](https://source.android.com/devices/tech/dalvik/dex-format#value-formats)
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface Value {
 
@@ -24,7 +24,7 @@ public interface Value {
 /**
  * The kind of the [Value] wrapping value.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public enum class ValueKind {
   /** Corresponds to `null` */

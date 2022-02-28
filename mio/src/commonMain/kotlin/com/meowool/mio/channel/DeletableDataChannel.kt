@@ -10,7 +10,7 @@ import java.nio.charset.Charset
  * This interface provides the ability to delete data randomly, through the [cursor] can directly
  * delete the data at the beginning, at the middle, and even at the end of the channel.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface DeletableDataChannel : ReadableDataChannel {
 

@@ -5,7 +5,7 @@ package com.meowool.mio
 /**
  * An object representing the file system and its path.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface Zip : IFile<Zip>, IPathGroup<Zip, Path, File, Directory>, Closeable {
 

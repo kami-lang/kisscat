@@ -1,0 +1,1052 @@
+// Signature format: 4.0
+package com.meowool.mio {
+
+  public final class AccessDeniedException extends com.meowool.mio.FileSystemException {
+    ctor public AccessDeniedException(com.meowool.mio.IPath<?> path, optional com.meowool.mio.IPath<?>? other, optional String? reason);
+  }
+
+  public final class AttributesKt {
+    method @kotlin.jvm.Throws(exceptionClasses=IOException::class) public static inline <reified V> V! getAttributeView(com.meowool.mio.IPath<?>, <ErrorType> options);
+    method public static error.NonExistentClass! getBasicAttributeView(com.meowool.mio.IPath<?>);
+    method @kotlin.jvm.Throws(exceptionClasses=IOException::class) public static inline <reified A> A! readAttributes(com.meowool.mio.IPath<?>, <ErrorType> options);
+    method public static error.NonExistentClass! readBasicAttributes(com.meowool.mio.IPath<?>);
+  }
+
+  public final class AutoCloseable_sharedKt {
+  }
+
+  public final class Charsets {
+    method public error.NonExistentClass! getISO_8859_1();
+    method public error.NonExistentClass! getUS_ASCII();
+    method public error.NonExistentClass! getUTF_16();
+    method public error.NonExistentClass! getUTF_16BE();
+    method public error.NonExistentClass! getUTF_16LE();
+    method public error.NonExistentClass! getUTF_32();
+    method public error.NonExistentClass! getUTF_32BE();
+    method public error.NonExistentClass! getUTF_32LE();
+    method public error.NonExistentClass! getUTF_8();
+    property public final error.NonExistentClass! ISO_8859_1;
+    property public final error.NonExistentClass! US_ASCII;
+    property public final error.NonExistentClass! UTF_16;
+    property public final error.NonExistentClass! UTF_16BE;
+    property public final error.NonExistentClass! UTF_16LE;
+    property public final error.NonExistentClass! UTF_32;
+    property public final error.NonExistentClass! UTF_32BE;
+    property public final error.NonExistentClass! UTF_32LE;
+    property public final error.NonExistentClass! UTF_8;
+    field public static final com.meowool.mio.Charsets INSTANCE;
+  }
+
+  public final class CharsetsKt {
+    method public static inline String decodeToString(byte[], optional error.NonExistentClass charset);
+  }
+
+  public final class Charsets_sharedKt {
+    method public static error.NonExistentClass! charset(String name);
+    method public static inline byte[] toByteArray(String, error.NonExistentClass charset);
+    method public static inline String toString(byte[], error.NonExistentClass charset);
+  }
+
+  public final class CloseableKt {
+    method public static inline <T, R> R! use(T?, kotlin.jvm.functions.Function1<? super T,? extends R> block);
+  }
+
+  public abstract sealed class CompressionLevel {
+    method public final int getLevel();
+    property public final int level;
+    field public static final com.meowool.mio.CompressionLevel.Companion Companion;
+  }
+
+  public static final class CompressionLevel.Companion {
+    method public operator com.meowool.mio.CompressionLevel invoke(int level);
+  }
+
+  public static final class CompressionLevel.Default extends com.meowool.mio.CompressionLevel {
+    field public static final com.meowool.mio.CompressionLevel.Default INSTANCE;
+  }
+
+  public static final class CompressionLevel.Fastest extends com.meowool.mio.CompressionLevel {
+    field public static final com.meowool.mio.CompressionLevel.Fastest INSTANCE;
+  }
+
+  public static final class CompressionLevel.None extends com.meowool.mio.CompressionLevel {
+    field public static final com.meowool.mio.CompressionLevel.None INSTANCE;
+  }
+
+  public static final class CompressionLevel.Optimal extends com.meowool.mio.CompressionLevel {
+    field public static final com.meowool.mio.CompressionLevel.Optimal INSTANCE;
+  }
+
+  public final class ConstainsKt {
+    method public static boolean endsWith(error.NonExistentClass, CharSequence path);
+    method public static boolean endsWith(error.NonExistentClass, java.lang.CharSequence... names);
+    method public static boolean endsWith(error.NonExistentClass, Iterable<? extends java.lang.CharSequence> names);
+    method public static boolean endsWith(error.NonExistentClass, kotlin.sequences.Sequence<? extends java.lang.CharSequence> names);
+    method public static boolean startsWith(error.NonExistentClass, CharSequence path);
+    method public static boolean startsWith(error.NonExistentClass, java.lang.CharSequence... names);
+    method public static boolean startsWith(error.NonExistentClass, Iterable<? extends java.lang.CharSequence> names);
+    method public static boolean startsWith(error.NonExistentClass, kotlin.sequences.Sequence<? extends java.lang.CharSequence> names);
+  }
+
+  public final class DirectoryKt {
+    method public static inline com.meowool.mio.IDirectory<?> Dir(CharSequence first, java.lang.CharSequence... more);
+    method public static inline com.meowool.mio.IDirectory<?> Dir(com.meowool.mio.IPath<?> path);
+    method public static inline com.meowool.mio.IDirectory<?> asDir(CharSequence, java.lang.CharSequence... more);
+    method public static inline com.meowool.mio.IDirectory<?> asDir(com.meowool.mio.IPath<?>);
+    method public static inline com.meowool.mio.IDirectory<?>? asDirOrNull(com.meowool.mio.IPath<?>?);
+    method public static inline com.meowool.mio.IDirectory<?> asDirectory(CharSequence, java.lang.CharSequence... more);
+    method public static inline com.meowool.mio.IDirectory<?> asDirectory(com.meowool.mio.IPath<?>);
+    method public static com.meowool.mio.IDirectory<?>? asDirectoryOrNull(com.meowool.mio.IPath<?>?);
+  }
+
+  public final class DirectoryNotEmptyException extends com.meowool.mio.FileSystemException {
+    ctor public DirectoryNotEmptyException(com.meowool.mio.IPath<?>? dir);
+  }
+
+  public final class Directory_sharedKt {
+    method public static com.meowool.mio.IDirectory<?> Directory(CharSequence first, java.lang.CharSequence... more);
+    method public static com.meowool.mio.IDirectory<?> Directory(error.NonExistentClass path);
+    method public static com.meowool.mio.IDirectory<?> Directory(error.NonExistentClass uri);
+    method public static com.meowool.mio.IDirectory<?> Directory(error.NonExistentClass nioPath);
+    method public static com.meowool.mio.IDirectory<?> Directory(error.NonExistentClass ioFile);
+    method public static java.util.List<com.meowool.mio.IDirectory<?>> mapIoFilesToDirectories(Iterable<? extends error.NonExistentClass>);
+    method public static kotlin.sequences.Sequence<com.meowool.mio.IDirectory<?>> mapIoFilesToDirectories(kotlin.sequences.Sequence<? extends error.NonExistentClass>);
+    method public static java.util.List<com.meowool.mio.IDirectory<?>> mapToMioDirectories(Iterable<? extends error.NonExistentClass>);
+    method public static kotlin.sequences.Sequence<com.meowool.mio.IDirectory<?>> mapToMioDirectories(kotlin.sequences.Sequence<? extends error.NonExistentClass>);
+    method public static java.util.List<com.meowool.mio.IDirectory<?>> mapToMioDirectories(error.NonExistentClass![]);
+    method public static java.util.List<com.meowool.mio.IDirectory<?>> mapToMioDirectories(error.NonExistentClass![]);
+    method public static inline com.meowool.mio.IDirectory<?> toMioDirectory(error.NonExistentClass);
+    method public static inline com.meowool.mio.IDirectory<?> toMioDirectory(error.NonExistentClass);
+    method public static inline com.meowool.mio.IDirectory<?> toMioDirectory(error.NonExistentClass);
+  }
+
+  public enum Endianness {
+    enum_constant public static final com.meowool.mio.Endianness BigEndian;
+    enum_constant public static final com.meowool.mio.Endianness LittleEndian;
+    enum_constant public static final com.meowool.mio.Endianness NativeEndian;
+  }
+
+  public final class ExceptionsKt {
+  }
+
+  public final class Exceptions_jvmKt {
+  }
+
+  public final class FileKt {
+    method public static inline com.meowool.mio.IFile<?> asFile(CharSequence, java.lang.CharSequence... more);
+    method public static inline com.meowool.mio.IFile<?> asFile(com.meowool.mio.IPath<?>);
+    method public static com.meowool.mio.IFile<?>? asFileOrNull(com.meowool.mio.IPath<?>?);
+  }
+
+  public class FileSystemException {
+    ctor public FileSystemException(com.meowool.mio.IPath<?>? path, optional com.meowool.mio.IPath<?>? other, optional String? reason);
+    method public final com.meowool.mio.IPath<?>? getOther();
+    method public final com.meowool.mio.IPath<?>? getPath();
+    method public final String? getReason();
+    property public final com.meowool.mio.IPath<?>? other;
+    property public final com.meowool.mio.IPath<?>? path;
+    property public final String? reason;
+  }
+
+  public final class File_sharedKt {
+    method public static com.meowool.mio.IFile<?> File(CharSequence first, java.lang.CharSequence... more);
+    method public static com.meowool.mio.IFile<?> File(com.meowool.mio.IPath<?> path);
+    method public static com.meowool.mio.IFile<?> File(error.NonExistentClass uri);
+    method public static com.meowool.mio.IFile<?> File(error.NonExistentClass nioPath);
+    method public static com.meowool.mio.IFile<?> File(error.NonExistentClass ioFile);
+    method public static java.util.List<com.meowool.mio.IFile<?>> mapIoFilesToFiles(Iterable<? extends error.NonExistentClass>);
+    method public static kotlin.sequences.Sequence<com.meowool.mio.IFile<?>> mapIoFilesToFiles(kotlin.sequences.Sequence<? extends error.NonExistentClass>);
+    method public static java.util.List<com.meowool.mio.IFile<?>> mapToMioFiles(Iterable<? extends error.NonExistentClass>);
+    method public static kotlin.sequences.Sequence<com.meowool.mio.IFile<?>> mapToMioFiles(kotlin.sequences.Sequence<? extends error.NonExistentClass>);
+    method public static java.util.List<com.meowool.mio.IFile<?>> mapToMioFiles(error.NonExistentClass![]);
+    method public static java.util.List<com.meowool.mio.IFile<?>> mapToMioFiles(error.NonExistentClass![]);
+    method public static inline com.meowool.mio.IFile<?> toMioFile(error.NonExistentClass);
+    method public static inline com.meowool.mio.IFile<?> toMioFile(error.NonExistentClass);
+    method public static inline com.meowool.mio.IFile<?> toMioFile(error.NonExistentClass);
+  }
+
+  public interface Flushable {
+    method @kotlin.jvm.Throws(exceptionClasses=IOException::class) public void flush();
+  }
+
+  public final class GroupNotEmptyException extends com.meowool.mio.FileSystemException {
+    ctor public GroupNotEmptyException(com.meowool.mio.IPathGroup<?,?,?,?>? group);
+  }
+
+  public final class HandlingErrorSolutionsKt {
+  }
+
+  public interface IDirectory<Self extends com.meowool.mio.IDirectory<Self>> extends com.meowool.mio.IPathGroup<Self,com.meowool.mio.IPath<?>,com.meowool.mio.IFile<?>,com.meowool.mio.IDirectory<?>> {
+    method public com.meowool.mio.IFile<?> addTempFile(optional String? prefix, optional String? suffix);
+    method public Self create(optional boolean overwrite);
+    method @kotlin.jvm.Throws(exceptionClasses={DirectoryNotEmptyException::class, PathAlreadyExistsException::class, ParentDirectoryNotExistsException::class, PathExistsAndIsNotDirectoryException::class}) public Self createStrictly(optional boolean overwrite) throws com.meowool.mio.DirectoryNotEmptyException, com.meowool.mio.ParentDirectoryNotExistsException, com.meowool.mio.PathAlreadyExistsException, com.meowool.mio.PathExistsAndIsNotDirectoryException;
+    method public long getTotalSize();
+    property public abstract long totalSize;
+  }
+
+  public interface IFile<Self extends com.meowool.mio.IFile<Self>> extends com.meowool.mio.IPath<Self> {
+    method public Self append(byte[] bytes);
+    method public Self append(com.meowool.mio.channel.FileChannel<?> channel);
+    method public Self append(CharSequence text, optional error.NonExistentClass charset);
+    method public Self append(Iterable<? extends java.lang.CharSequence> lines, optional error.NonExistentClass charset);
+    method public Self append(kotlin.sequences.Sequence<? extends java.lang.CharSequence> lines, optional error.NonExistentClass charset);
+    method public Self copyInto(com.meowool.mio.IPathGroup<?,?,?,?> target, optional boolean overwrite, optional boolean followLinks);
+    method @kotlin.jvm.Throws(exceptionClasses=PathAlreadyExistsException::class) public <R extends com.meowool.mio.IFile<?>> R copyTo(R target, optional boolean overwrite, optional boolean followLinks) throws com.meowool.mio.PathAlreadyExistsException;
+    method @kotlin.jvm.Throws(exceptionClasses=PathExistsAndIsNotFileException::class) public Self create(optional boolean overwrite) throws com.meowool.mio.PathExistsAndIsNotFileException;
+    method @kotlin.jvm.Throws(exceptionClasses={PathExistsAndIsNotFileException::class, PathAlreadyExistsException::class, ParentDirectoryNotExistsException::class}) public Self createStrictly(optional boolean overwrite) throws com.meowool.mio.ParentDirectoryNotExistsException, com.meowool.mio.PathAlreadyExistsException, com.meowool.mio.PathExistsAndIsNotFileException;
+    method public boolean delete(optional boolean followLinks);
+    method @kotlin.jvm.Throws(exceptionClasses=NoSuchPathException::class) public boolean deleteStrictly(optional boolean followLinks) throws com.meowool.mio.NoSuchPathException;
+    method public byte[] getBytes();
+    method public String getExtension();
+    method public String getExtensionWithDot();
+    method public String getNameWithoutExtension();
+    method public kotlinx.coroutines.flow.Flow<java.lang.String> lines(optional error.NonExistentClass charset);
+    method public Self moveInto(com.meowool.mio.IPathGroup<?,?,?,?> target, optional boolean overwrite, optional boolean followLinks);
+    method @kotlin.jvm.Throws(exceptionClasses=PathAlreadyExistsException::class) public <R extends com.meowool.mio.IFile<?>> R moveTo(R target, optional boolean overwrite, optional boolean followLinks) throws com.meowool.mio.PathAlreadyExistsException;
+    method public com.meowool.mio.channel.FileChannel<Self> open();
+    method public default <R> R! open(kotlin.jvm.functions.Function1<? super com.meowool.mio.channel.FileChannel<Self>,? extends R> block);
+    method public Self replaceWith(Self file, optional boolean keepSources, optional boolean followLinks);
+    method public void setBytes(byte[] bytes);
+    method public void setExtension(String extension);
+    method public void setExtensionWithDot(String extensionWithDot);
+    method public void setNameWithoutExtension(String nameWithoutExtension);
+    method public String text(optional error.NonExistentClass charset);
+    method public Self write(byte[] bytes);
+    method public Self write(com.meowool.mio.channel.FileChannel<?> channel);
+    method public Self write(CharSequence text, optional error.NonExistentClass charset);
+    method public Self write(Iterable<? extends java.lang.CharSequence> lines, optional error.NonExistentClass charset);
+    method public Self write(kotlin.sequences.Sequence<? extends java.lang.CharSequence> lines, optional error.NonExistentClass charset);
+    property public abstract byte[] bytes;
+    property public abstract String extension;
+    property public abstract String extensionWithDot;
+    property public abstract String nameWithoutExtension;
+  }
+
+  public interface IPath<Self extends com.meowool.mio.IPath<Self>> {
+    method public int compareTo(Self other);
+    method public int compareTo(String otherPath);
+    method @kotlin.jvm.Throws(exceptionClasses=PathExistsAndIsNotDirectoryException::class) public Self createParentDirectories() throws com.meowool.mio.PathExistsAndIsNotDirectoryException;
+    method public operator com.meowool.mio.IPath<?> div(com.meowool.mio.IPath<?> path);
+    method public operator com.meowool.mio.IPath<?> div(CharSequence path);
+    method public boolean endsWith(com.meowool.mio.IPath<?> path);
+    method public boolean equals(Object? other);
+    method public boolean exists(optional boolean followLinks);
+    method public Self getAbsolute();
+    method public String getAbsoluteString();
+    method public String getContentType();
+    method public long getCreationTime();
+    method public boolean getHasRoot();
+    method public Object getKey();
+    method public long getLastAccessTime();
+    method public long getLastModifiedTime();
+    method public String getName();
+    method public Self getNormalized();
+    method public String getNormalizedString();
+    method public com.meowool.mio.IDirectory<?>? getParent();
+    method public String? getParentString();
+    method public default String getReadableSize();
+    method public Self getReal();
+    method public default String getRealString();
+    method public long getSize();
+    method public Self getSymbolicLink();
+    method public String? getVolumeLabel();
+    method public int hashCode();
+    method public default boolean isAbsolute();
+    method public boolean isDirectory();
+    method public boolean isExecutable();
+    method public boolean isHidden();
+    method public boolean isOther();
+    method public boolean isReadable();
+    method public boolean isRegularFile();
+    method public default boolean isRelative();
+    method public boolean isRoot();
+    method public boolean isSameAs(com.meowool.mio.IPath<?>? other);
+    method public boolean isSymbolicLink();
+    method public boolean isWritable();
+    method public default com.meowool.mio.IPath<?> join(com.meowool.mio.IPath<?> path);
+    method public default com.meowool.mio.IPath<?> join(CharSequence path);
+    method public com.meowool.mio.IPath<?> join(com.meowool.mio.IPath<?>... paths);
+    method public com.meowool.mio.IPath<?> join(java.lang.CharSequence... paths);
+    method public default com.meowool.mio.IDirectory<?> joinDir(com.meowool.mio.IPath<?>... paths);
+    method public default com.meowool.mio.IDirectory<?> joinDir(java.lang.CharSequence... paths);
+    method public default com.meowool.mio.IDirectory<?> joinDirToParent(com.meowool.mio.IPath<?>... paths);
+    method public default com.meowool.mio.IDirectory<?> joinDirToParent(java.lang.CharSequence... paths);
+    method public default com.meowool.mio.IFile<?> joinFile(com.meowool.mio.IPath<?>... paths);
+    method public default com.meowool.mio.IFile<?> joinFile(java.lang.CharSequence... paths);
+    method public default com.meowool.mio.IFile<?> joinFileToParent(com.meowool.mio.IPath<?>... paths);
+    method public default com.meowool.mio.IFile<?> joinFileToParent(java.lang.CharSequence... paths);
+    method public default com.meowool.mio.IPath<?> joinToParent(com.meowool.mio.IPath<?>... paths);
+    method public default com.meowool.mio.IPath<?> joinToParent(java.lang.CharSequence... paths);
+    method public <R extends com.meowool.mio.IPath<?>> R linkSymbolTo(R target);
+    method public <R extends com.meowool.mio.IPath<?>> R linkTo(R target);
+    method public boolean notExists(optional boolean followLinks);
+    method public default infix String relativeStrTo(CharSequence target);
+    method public default infix String relativeStrTo(com.meowool.mio.IPath<?> target);
+    method public infix com.meowool.mio.IPath<?> relativeTo(CharSequence target);
+    method public infix com.meowool.mio.IPath<?> relativeTo(com.meowool.mio.IPath<?> target);
+    method public void setCreationTime(long creationTime);
+    method public void setExecutable(boolean isExecutable);
+    method public void setHidden(boolean isHidden);
+    method public void setLastAccessTime(long lastAccessTime);
+    method public void setLastModifiedTime(long lastModifiedTime);
+    method public void setName(String name);
+    method public void setReadable(boolean isReadable);
+    method public void setSize(long size);
+    method public void setWritable(boolean isWritable);
+    method public java.util.List<java.lang.String> split();
+    method public boolean startsWith(com.meowool.mio.IPath<?> path);
+    method public Self toReal(optional boolean followLinks);
+    method public String toString();
+    property public abstract Self absolute;
+    property public abstract String absoluteString;
+    property public abstract String contentType;
+    property public abstract long creationTime;
+    property public abstract boolean hasRoot;
+    property public default boolean isAbsolute;
+    property public abstract boolean isDirectory;
+    property public abstract boolean isExecutable;
+    property public abstract boolean isHidden;
+    property public abstract boolean isOther;
+    property public abstract boolean isReadable;
+    property public abstract boolean isRegularFile;
+    property public default boolean isRelative;
+    property public abstract boolean isRoot;
+    property public abstract boolean isSymbolicLink;
+    property public abstract boolean isWritable;
+    property public abstract Object key;
+    property public abstract long lastAccessTime;
+    property public abstract long lastModifiedTime;
+    property public abstract String name;
+    property public abstract Self normalized;
+    property public abstract String normalizedString;
+    property public abstract com.meowool.mio.IDirectory<?>? parent;
+    property public abstract String? parentString;
+    property public default String readableSize;
+    property public abstract Self real;
+    property public default String realString;
+    property public abstract long size;
+    property public abstract Self symbolicLink;
+    property public abstract String? volumeLabel;
+  }
+
+  public interface IPathGroup<Self extends com.meowool.mio.IPathGroup<Self, ?, ?, ?>, SubPath extends com.meowool.mio.IPath<?>, SubFile extends com.meowool.mio.IFile<?>, SubDirectory extends com.meowool.mio.IDirectory<?>> extends com.meowool.mio.IPath<Self> {
+    method public default SubDirectory add(SubDirectory subdirectory, optional boolean recursively, optional boolean overwrite, optional boolean keepSources, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method public default SubFile add(SubFile subfile, optional boolean overwrite, optional boolean keepSources, optional boolean followLinks);
+    method public default java.util.List<SubDirectory> addAll(SubDirectory![] subdirectories, optional boolean recursively, optional boolean overwrite, optional boolean keepSources, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method public default java.util.List<SubDirectory> addAll(Iterable<? extends SubDirectory> subdirectories, optional boolean recursively, optional boolean overwrite, optional boolean keepSources, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method public default kotlin.sequences.Sequence<SubDirectory> addAll(kotlin.sequences.Sequence<? extends SubDirectory> subdirectories, optional boolean recursively, optional boolean overwrite, optional boolean keepSources, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method public default java.util.List<SubFile> addAll(SubFile![] subfiles, optional boolean overwrite, optional boolean keepSources, optional boolean followLinks);
+    method public default java.util.List<SubFile> addAll(Iterable<? extends SubFile> subfiles, optional boolean overwrite, optional boolean keepSources, optional boolean followLinks);
+    method public default kotlin.sequences.Sequence<SubFile> addAll(kotlin.sequences.Sequence<? extends SubFile> subfiles, optional boolean overwrite, optional boolean keepSources, optional boolean followLinks);
+    method public default SubDirectory addDir(String subpath, optional boolean overwrite);
+    method public SubDirectory addDirectory(String subpath, optional boolean overwrite);
+    method public SubFile addFile(String subpath, optional boolean overwrite);
+    method public default boolean clear(optional boolean recursively, optional boolean followLinks, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method public default operator boolean contains(CharSequence subpath);
+    method public default operator boolean contains(com.meowool.mio.IPath<?> subpath);
+    method public com.meowool.mio.IPathGroup<?,?,?,?> copyInto(com.meowool.mio.IPathGroup<?,?,?,?> target, optional boolean recursively, optional boolean overwrite, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method public com.meowool.mio.IPathGroup<?,?,?,?> copyTo(com.meowool.mio.IPathGroup<?,?,?,?> target, optional boolean recursively, optional boolean overwrite, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method public boolean delete(optional boolean recursively, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method public default boolean deleteRecursively(optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method @kotlin.jvm.Throws(exceptionClasses={GroupNotEmptyException::class, NoSuchPathException::class}) public boolean deleteStrictly(optional boolean recursively, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError) throws com.meowool.mio.GroupNotEmptyException, com.meowool.mio.NoSuchPathException;
+    method @kotlin.jvm.Throws(exceptionClasses={DirectoryNotEmptyException::class, NoSuchPathException::class}) public default boolean deleteStrictlyRecursively(optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError) throws com.meowool.mio.DirectoryNotEmptyException, com.meowool.mio.NoSuchPathException;
+    method public default SubPath? find(String name, optional boolean recursively);
+    method public default java.util.List<SubPath> findAll(String name, optional boolean recursively);
+    method public kotlinx.coroutines.flow.Flow<SubPath> flow(optional int depth);
+    method public default kotlinx.coroutines.flow.Flow<SubPath> flowRecursively();
+    method public default operator SubPath get(String name, optional boolean recursively);
+    method public default java.util.List<SubPath> getAll(String name, optional boolean recursively);
+    method public default boolean isEmpty();
+    method public default boolean isNotEmpty();
+    method public java.util.List<SubPath> list(optional int depth);
+    method public default java.util.List<SubPath> listRecursively();
+    method public com.meowool.mio.IPathGroup<?,?,?,?> moveInto(com.meowool.mio.IPathGroup<?,?,?,?> target, optional boolean recursively, optional boolean overwrite, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method public com.meowool.mio.IPathGroup<?,?,?,?> moveTo(com.meowool.mio.IPathGroup<?,?,?,?> target, optional boolean recursively, optional boolean overwrite, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubPath,java.lang.Boolean> filter, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError);
+    method public java.util.List<SubPath> walk(optional int depth, optional boolean walkDirs, optional boolean walkFiles, optional boolean followLinks, optional kotlin.jvm.functions.Function1<? super SubDirectory,java.lang.Boolean> filterDirs, optional kotlin.jvm.functions.Function1<? super SubFile,java.lang.Boolean> filterFiles, optional kotlin.jvm.functions.Function2<? super SubPath,? super java.lang.Throwable,? extends com.meowool.mio.PathHandlingErrorSolution> onError, optional kotlin.jvm.functions.Function1<? super SubDirectory,kotlin.Unit> onEnterDirectory, optional kotlin.jvm.functions.Function1<? super SubDirectory,kotlin.Unit> onLeaveDirectory, optional kotlin.jvm.functions.Function1<? super SubFile,kotlin.Unit> onVisitFile);
+  }
+
+  public interface IZipEntry<Self extends com.meowool.mio.IZipEntry<Self>> extends com.meowool.mio.IPath<Self> {
+    method public operator com.meowool.mio.IZipEntry<?> div(com.meowool.mio.IPath<?> path);
+    method public operator com.meowool.mio.IZipEntry<?> div(CharSequence path);
+    method public String? getComment();
+    method public long getCompressedSize();
+    method public long getCrc();
+    method public byte[]? getExtra();
+    method public com.meowool.mio.Zip? getHolder();
+    method public com.meowool.mio.ZipDirectoryEntry? getParent();
+    method public com.meowool.mio.IZipEntry<?> join(com.meowool.mio.IPath<?>... paths);
+    method public com.meowool.mio.IZipEntry<?> join(java.lang.CharSequence... paths);
+    method public default com.meowool.mio.IZipEntry<?> join(com.meowool.mio.IPath<?> path);
+    method public default com.meowool.mio.IZipEntry<?> join(CharSequence path);
+    method public com.meowool.mio.IZipEntry<?> joinToParent(com.meowool.mio.IPath<?>... paths);
+    method public void setComment(String? comment);
+    method public void setExtra(byte[]? extra);
+    property public abstract String? comment;
+    property public abstract long compressedSize;
+    property public abstract long crc;
+    property public abstract byte[]? extra;
+    property public abstract com.meowool.mio.Zip? holder;
+    property public abstract com.meowool.mio.ZipDirectoryEntry? parent;
+  }
+
+  public final class IllegalPathException extends com.meowool.mio.FileSystemException {
+    ctor public IllegalPathException(com.meowool.mio.IPath<?> path, optional String? message);
+  }
+
+  public final class LinkAlreadyExistsException extends com.meowool.mio.FileSystemException {
+    ctor public LinkAlreadyExistsException(com.meowool.mio.IPath<?> path);
+  }
+
+  public abstract sealed class MediaType {
+    method public final operator boolean contains(String type);
+    method public final java.util.List<java.lang.String> getValue();
+    property public final java.util.List<java.lang.String> value;
+  }
+
+  public static final class MediaType.Apk extends com.meowool.mio.MediaType {
+    field public static final com.meowool.mio.MediaType.Apk INSTANCE;
+  }
+
+  public static final class MediaType.Archive extends com.meowool.mio.MediaType {
+    field public static final com.meowool.mio.MediaType.Archive INSTANCE;
+  }
+
+  public static final class MediaType.Audio extends com.meowool.mio.MediaType {
+    field public static final com.meowool.mio.MediaType.Audio INSTANCE;
+  }
+
+  public static final class MediaType.Directory extends com.meowool.mio.MediaType {
+    field public static final com.meowool.mio.MediaType.Directory INSTANCE;
+  }
+
+  public static final class MediaType.Font extends com.meowool.mio.MediaType {
+    field public static final com.meowool.mio.MediaType.Font INSTANCE;
+  }
+
+  public static final class MediaType.Image extends com.meowool.mio.MediaType {
+    field public static final com.meowool.mio.MediaType.Image INSTANCE;
+  }
+
+  public static final class MediaType.Text extends com.meowool.mio.MediaType {
+    field public static final com.meowool.mio.MediaType.Text INSTANCE;
+  }
+
+  public static final class MediaType.Video extends com.meowool.mio.MediaType {
+    field public static final com.meowool.mio.MediaType.Video INSTANCE;
+  }
+
+  public final class MediaTypesKt {
+    method public static boolean isApkFile(com.meowool.mio.IPath<?>);
+    method public static boolean isArchiveFile(com.meowool.mio.IPath<?>);
+  }
+
+  public final class NoSuchPathException extends com.meowool.mio.FileSystemException {
+    ctor public NoSuchPathException(com.meowool.mio.IPath<?> path, optional com.meowool.mio.IPath<?>? other, optional String? reason);
+  }
+
+  public final class Okio_sharedKt {
+    method public static suspend Object? collectLine(error.NonExistentClass, error.NonExistentClass charset, kotlin.jvm.functions.Function2<? super java.lang.String,? super kotlin.coroutines.Continuation<? super kotlin.Unit>,?> action, kotlin.coroutines.Continuation<? super error.NonExistentClass> p);
+    method public static inline void forEachLine(error.NonExistentClass, error.NonExistentClass charset, kotlin.jvm.functions.Function1<? super java.lang.String,kotlin.Unit> action);
+    method public static kotlinx.coroutines.flow.Flow<java.lang.String> lines(error.NonExistentClass, error.NonExistentClass charset);
+    method public static error.NonExistentClass! readByteStringLine(error.NonExistentClass);
+    method public static String? readLine(error.NonExistentClass, error.NonExistentClass charset);
+    method public static java.util.List<java.lang.String> readLines(error.NonExistentClass, error.NonExistentClass charset);
+    method public static String readText(error.NonExistentClass, error.NonExistentClass charset);
+    method public static error.NonExistentClass! write(error.NonExistentClass, CharSequence charSequence, error.NonExistentClass charset);
+  }
+
+  public class OutOfMemoryError {
+    ctor public OutOfMemoryError(optional String? message);
+  }
+
+  public final class ParentDirectoryNotExistsException extends com.meowool.mio.FileSystemException {
+    ctor public ParentDirectoryNotExistsException(com.meowool.mio.IPath<?> path);
+  }
+
+  public final class PathAlreadyExistsException extends com.meowool.mio.FileSystemException {
+    ctor public PathAlreadyExistsException(com.meowool.mio.IPath<?> path, optional com.meowool.mio.IPath<?>? other, optional String? reason);
+  }
+
+  public final class PathExistsAndIsNotDirectoryException extends com.meowool.mio.FileSystemException {
+    ctor public PathExistsAndIsNotDirectoryException(com.meowool.mio.IPath<?> path);
+  }
+
+  public final class PathExistsAndIsNotFileException extends com.meowool.mio.FileSystemException {
+    ctor public PathExistsAndIsNotFileException(com.meowool.mio.IPath<?> path);
+  }
+
+  public final class PathGroupKt {
+  }
+
+  public enum PathHandlingErrorSolution {
+    enum_constant public static final com.meowool.mio.PathHandlingErrorSolution Skip;
+    enum_constant public static final com.meowool.mio.PathHandlingErrorSolution Stop;
+  }
+
+  public final class PathKt {
+    method public static inline com.meowool.mio.IPath<?> asPath(CharSequence, java.lang.CharSequence... more);
+    method public static error.NonExistentClass! getCurrentRelativePath();
+    method public static error.NonExistentClass! getEmptyRelativePath();
+    method public static error.NonExistentClass! getEmptyRootPath();
+  }
+
+  public interface PathSortStrategy {
+    method public void custom(java.util.Comparator<error.NonExistentClass> comparator);
+    method public void default();
+    method public void directoriesFirst();
+    method public void extension(boolean ignoreCase);
+    method public void filesFirst();
+    method public java.util.Comparator<error.NonExistentClass> get();
+    method public void hiddenFirst();
+    method public void lastModified();
+    method public void name(optional boolean ignoreCase);
+    method public void reversed();
+    method public void size(optional boolean recursively);
+  }
+
+  public final class PathSortsKt {
+    method public static error.NonExistentClass! sorted(Iterable<? extends error.NonExistentClass>);
+    method public static error.NonExistentClass! sorted(error.NonExistentClass![]);
+    method public static error.NonExistentClass! sorted(kotlin.sequences.Sequence<? extends error.NonExistentClass>);
+    method public static inline error.NonExistentClass! sortedBy(Iterable<? extends error.NonExistentClass>, optional com.meowool.mio.PathSortStrategy strategy, kotlin.jvm.functions.Function1<? super com.meowool.mio.PathSortStrategy,kotlin.Unit> declaration);
+    method public static error.NonExistentClass! sortedBy(error.NonExistentClass![], optional com.meowool.mio.PathSortStrategy strategy, kotlin.jvm.functions.Function1<? super com.meowool.mio.PathSortStrategy,kotlin.Unit> declaration);
+    method public static error.NonExistentClass! sortedBy(kotlin.sequences.Sequence<? extends error.NonExistentClass>, optional com.meowool.mio.PathSortStrategy strategy, kotlin.jvm.functions.Function1<? super com.meowool.mio.PathSortStrategy,kotlin.Unit> declaration);
+    method public static error.NonExistentClass! sortedWith(Iterable<? extends error.NonExistentClass>, com.meowool.mio.PathSortStrategy strategy);
+    method public static error.NonExistentClass! sortedWith(error.NonExistentClass![], com.meowool.mio.PathSortStrategy strategy);
+    method public static error.NonExistentClass! sortedWith(kotlin.sequences.Sequence<? extends error.NonExistentClass>, com.meowool.mio.PathSortStrategy strategy);
+  }
+
+  public final class Path_sharedKt {
+    method public static com.meowool.mio.IPath<?> Path(CharSequence first, java.lang.CharSequence... more);
+    method public static com.meowool.mio.IPath<?> Path(error.NonExistentClass uri);
+    method public static com.meowool.mio.IPath<?> Path(error.NonExistentClass nioPath);
+    method public static com.meowool.mio.IPath<?> Path(error.NonExistentClass ioFile);
+    method public static java.util.List<com.meowool.mio.IPath<?>> mapIoFilesToPaths(Iterable<? extends error.NonExistentClass>);
+    method public static kotlin.sequences.Sequence<com.meowool.mio.IPath<?>> mapIoFilesToPaths(kotlin.sequences.Sequence<? extends error.NonExistentClass>);
+    method public static java.util.List<com.meowool.mio.IPath<?>> mapToMioPaths(Iterable<? extends error.NonExistentClass>);
+    method public static kotlin.sequences.Sequence<com.meowool.mio.IPath<?>> mapToMioPaths(kotlin.sequences.Sequence<? extends error.NonExistentClass>);
+    method public static java.util.List<com.meowool.mio.IPath<?>> mapToMioPaths(error.NonExistentClass![]);
+    method public static java.util.List<com.meowool.mio.IPath<?>> mapToMioPaths(error.NonExistentClass![]);
+    method public static error.NonExistentClass! toIoFile(com.meowool.mio.IPath<?>);
+    method public static inline com.meowool.mio.IPath<?> toMioPath(error.NonExistentClass);
+    method public static inline com.meowool.mio.IPath<?> toMioPath(error.NonExistentClass);
+    method public static inline com.meowool.mio.IPath<?> toMioPath(error.NonExistentClass);
+    method public static error.NonExistentClass! toNioPath(com.meowool.mio.IPath<?>);
+    method public static error.NonExistentClass! toURI(com.meowool.mio.IPath<?>);
+  }
+
+  public final class PreconditionsKt {
+    method public static inline error.NonExistentClass! requireDirectory(error.NonExistentClass, optional kotlin.jvm.functions.Function0<?> lazyMessage);
+    method public static inline error.NonExistentClass! requireExists(error.NonExistentClass, optional boolean followLinks, optional kotlin.jvm.functions.Function0<?> lazyMessage);
+    method public static inline error.NonExistentClass! requireNotExists(error.NonExistentClass, optional boolean followLinks, optional kotlin.jvm.functions.Function0<?> lazyMessage);
+    method public static inline error.NonExistentClass! requireRegularFile(error.NonExistentClass, optional kotlin.jvm.functions.Function0<?> lazyMessage);
+  }
+
+  public final class SeparatorsKt {
+    method public static String getSystemSeparator();
+    method public static error.NonExistentClass! getSystemSeparatorsPath(error.NonExistentClass);
+    method public static error.NonExistentClass! getUnixSeparatorsPath(error.NonExistentClass);
+    method public static error.NonExistentClass! getWindowsSeparatorsPath(error.NonExistentClass);
+  }
+
+  public final class Separators_sharedKt {
+    method public static char getSystemSeparatorChar();
+  }
+
+  public final class Sizes_androidKt {
+    method public static long getAvailableSize(com.meowool.mio.IPath<?>);
+    method public static long getBlockSize(com.meowool.mio.IPath<?>);
+  }
+
+  public final class SpacesKt {
+    method public static long getUsedSpace(error.NonExistentClass);
+  }
+
+  public final class Spaces_jvmKt {
+    method public static long getAvailableSpace(error.NonExistentClass);
+    method public static long getBlockSpace(error.NonExistentClass);
+  }
+
+  public final class Temps_sharedKt {
+    method public static com.meowool.mio.IDirectory<?> createTempDirectory(String? prefix);
+    method public static error.NonExistentClass! createTempFile(String? prefix, String? suffix);
+  }
+
+  public interface Zip extends com.meowool.mio.IFile<com.meowool.mio.Zip> com.meowool.mio.IPathGroup<com.meowool.mio.Zip,com.meowool.mio.IPath<?>,com.meowool.mio.IFile<?>,com.meowool.mio.IDirectory<?>> {
+    method public void close();
+    method public com.meowool.mio.IZipEntry<?> join(com.meowool.mio.IPath<?>... paths);
+    method public com.meowool.mio.IZipEntry<?> join(java.lang.CharSequence... paths);
+    method public default com.meowool.mio.ZipDirectoryEntry joinDir(com.meowool.mio.IPath<?>... paths);
+    method public default com.meowool.mio.ZipDirectoryEntry joinDir(java.lang.CharSequence... paths);
+    method public default com.meowool.mio.ZipFileEntry joinFile(com.meowool.mio.IPath<?>... paths);
+    method public default com.meowool.mio.ZipFileEntry joinFile(java.lang.CharSequence... paths);
+  }
+
+  public interface ZipDirectoryEntry extends com.meowool.mio.IDirectory<com.meowool.mio.ZipDirectoryEntry> com.meowool.mio.IZipEntry<com.meowool.mio.ZipDirectoryEntry> {
+  }
+
+  public final class ZipDirectoryEntryKt {
+    method public static inline com.meowool.mio.ZipDirectoryEntry asDir(com.meowool.mio.IZipEntry<?>);
+    method public static com.meowool.mio.ZipDirectoryEntry? asDirOrNull(com.meowool.mio.IZipEntry<?>?);
+    method public static inline com.meowool.mio.ZipDirectoryEntry asDirectory(com.meowool.mio.IZipEntry<?>);
+    method public static com.meowool.mio.ZipDirectoryEntry? asDirectoryOrNull(com.meowool.mio.IZipEntry<?>?);
+  }
+
+  public final class ZipDirectoryEntry_sharedKt {
+    method public static com.meowool.mio.ZipDirectoryEntry ZipDirectoryEntry(com.meowool.mio.IZipEntry<?> entry);
+  }
+
+  public final class ZipEntryKt {
+  }
+
+  public final class ZipEntry_sharedKt {
+  }
+
+  public interface ZipFileEntry extends com.meowool.mio.IFile<com.meowool.mio.ZipFileEntry> com.meowool.mio.IZipEntry<com.meowool.mio.ZipFileEntry> {
+  }
+
+  public final class ZipFileEntryKt {
+    method public static inline com.meowool.mio.ZipFileEntry asFile(com.meowool.mio.IZipEntry<?>);
+    method public static com.meowool.mio.ZipFileEntry? asFileOrNull(com.meowool.mio.IZipEntry<?>?);
+  }
+
+  public final class ZipFileEntry_sharedKt {
+    method public static com.meowool.mio.ZipFileEntry ZipFileEntry(com.meowool.mio.IZipEntry<?> entry);
+  }
+
+  public final class ZipKt {
+    method public static inline com.meowool.mio.Zip asZip(CharSequence, java.lang.CharSequence... more);
+    method public static inline com.meowool.mio.Zip asZip(com.meowool.mio.IPath<?>);
+  }
+
+  public final class Zip_sharedKt {
+    method public static com.meowool.mio.Zip Zip(CharSequence first, java.lang.CharSequence... more);
+    method public static com.meowool.mio.Zip Zip(error.NonExistentClass path);
+    method public static com.meowool.mio.Zip Zip(error.NonExistentClass uri);
+    method public static com.meowool.mio.Zip Zip(error.NonExistentClass nioPath);
+    method public static com.meowool.mio.Zip Zip(error.NonExistentClass ioFile);
+    method public static com.meowool.mio.Zip? asZipOrNull(error.NonExistentClass);
+    method public static java.util.List<com.meowool.mio.Zip> mapIoFilesToZips(Iterable<? extends error.NonExistentClass>);
+    method public static kotlin.sequences.Sequence<com.meowool.mio.Zip> mapIoFilesToZips(kotlin.sequences.Sequence<? extends error.NonExistentClass>);
+    method public static java.util.List<com.meowool.mio.Zip> mapToMioZips(Iterable<? extends error.NonExistentClass>);
+    method public static kotlin.sequences.Sequence<com.meowool.mio.Zip> mapToMioZips(kotlin.sequences.Sequence<? extends error.NonExistentClass>);
+    method public static java.util.List<com.meowool.mio.Zip> mapToMioZips(error.NonExistentClass![]);
+    method public static java.util.List<com.meowool.mio.Zip> mapToMioZips(error.NonExistentClass![]);
+    method public static error.NonExistentClass! toJavaZip(error.NonExistentClass);
+    method public static inline com.meowool.mio.Zip toMioZip(error.NonExistentClass);
+    method public static inline com.meowool.mio.Zip toMioZip(error.NonExistentClass);
+    method public static inline com.meowool.mio.Zip toMioZip(error.NonExistentClass);
+  }
+
+}
+
+package com.meowool.mio.channel {
+
+  public enum ByteOrder {
+    enum_constant public static final com.meowool.mio.channel.ByteOrder BigEndian;
+    enum_constant public static final com.meowool.mio.channel.ByteOrder LittleEndian;
+    enum_constant public static final com.meowool.mio.channel.ByteOrder NativeEndian;
+  }
+
+  public class ChannelEmptyException {
+    ctor public ChannelEmptyException(optional String? message);
+  }
+
+  public class ChannelOverflowException {
+    ctor public ChannelOverflowException(optional String? message);
+  }
+
+  public class ChannelUnderflowException {
+    ctor public ChannelUnderflowException(optional String? message);
+  }
+
+  public class ClosedChannelException {
+    ctor public ClosedChannelException();
+  }
+
+  public interface DataChannel extends com.meowool.mio.Flushable com.meowool.mio.channel.DeletableDataChannel com.meowool.mio.channel.ReadableDataChannel com.meowool.mio.channel.WriteableDataChannel {
+    method public com.meowool.mio.channel.DataChannel buffered(long count);
+    method public com.meowool.mio.channel.DataChannel buffered(long index, long count);
+    method @kotlin.jvm.Throws(exceptionClasses=IOException::class) public void close();
+  }
+
+  public interface DataChannelCursor {
+    method public com.meowool.mio.channel.DataChannelCursor first();
+    method public long getIndex();
+    method public boolean isReachEnd();
+    method public boolean isReachStart();
+    method public com.meowool.mio.channel.DataChannelCursor last();
+    method public com.meowool.mio.channel.DataChannelCursor moveLeft(optional long repeat);
+    method public com.meowool.mio.channel.DataChannelCursor moveRight(optional int repeat);
+    method public com.meowool.mio.channel.DataChannelCursor moveTo(long index);
+    method @kotlin.jvm.Throws(exceptionClasses=ChannelEmptyException::class) public com.meowool.mio.channel.DataChannelCursor moveToEndOfLine() throws com.meowool.mio.channel.ChannelEmptyException;
+    method public com.meowool.mio.channel.DataChannelCursor moveToFirst();
+    method public com.meowool.mio.channel.DataChannelCursor moveToLast();
+    method @kotlin.jvm.Throws(exceptionClasses=ChannelEmptyException::class) public com.meowool.mio.channel.DataChannelCursor moveToNextLine(optional long repeat) throws com.meowool.mio.channel.ChannelEmptyException;
+    method @kotlin.jvm.Throws(exceptionClasses=ChannelEmptyException::class) public com.meowool.mio.channel.DataChannelCursor moveToPreviousLine(optional long repeat) throws com.meowool.mio.channel.ChannelEmptyException;
+    method @kotlin.jvm.Throws(exceptionClasses=ChannelEmptyException::class) public com.meowool.mio.channel.DataChannelCursor moveToStartOfLine() throws com.meowool.mio.channel.ChannelEmptyException;
+    method public com.meowool.mio.channel.DataChannelCursor remember();
+    method public com.meowool.mio.channel.DataChannelCursor restore();
+    method public void setIndex(long index);
+    property public abstract long index;
+    property public abstract boolean isReachEnd;
+    property public abstract boolean isReachStart;
+  }
+
+  public final class DataChannelCursorKt {
+    method public static inline com.meowool.mio.channel.DataChannelCursor applyTemporarily(com.meowool.mio.channel.DataChannelCursor, kotlin.jvm.functions.Function1<? super com.meowool.mio.channel.DataChannelCursor,kotlin.Unit> block);
+    method public static inline <R> R! runTemporarily(com.meowool.mio.channel.DataChannelCursor, kotlin.jvm.functions.Function1<? super com.meowool.mio.channel.DataChannelCursor,? extends R> block);
+  }
+
+  public interface DataChannelInfo {
+    method public com.meowool.mio.channel.DataChannelCursor getCursor();
+    method public default long getFirstIndex();
+    method public default long getLastIndex();
+    method public com.meowool.mio.channel.ByteOrder getOrder();
+    method public default long getRemainingSize();
+    method public long getSize();
+    method public default boolean isEmpty();
+    method public default boolean isNotEmpty();
+    method public boolean isOpen();
+    method public void setOrder(com.meowool.mio.channel.ByteOrder order);
+    method public void setSize(long size);
+    property public abstract com.meowool.mio.channel.DataChannelCursor cursor;
+    property public default long firstIndex;
+    property public default long lastIndex;
+    property public abstract com.meowool.mio.channel.ByteOrder order;
+    property public default long remainingSize;
+    property public abstract long size;
+  }
+
+  public interface DeletableDataChannel extends com.meowool.mio.channel.ReadableDataChannel {
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean drop(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=ChannelEmptyException::class) public boolean dropAll() throws com.meowool.mio.channel.ChannelEmptyException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public default boolean dropBoolean(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropBytes(int count, optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropChar(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropDouble(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropFloat(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropInt(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLeft(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public default boolean dropLeftBoolean(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLeftBytes(int count, optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLeftChar(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLeftDouble(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLeftFloat(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLeftInt(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLeftLine(optional long index) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLeftLong(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLeftShort(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLine(optional long index) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropLong(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, IllegalArgumentException::class}) public boolean dropRange(optional long startIndex, optional long endIndex);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public boolean dropShort(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public byte pop(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=ChannelEmptyException::class) public default String popAll(optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelEmptyException;
+    method @kotlin.jvm.Throws(exceptionClasses=ChannelEmptyException::class) public byte[] popAllBytes() throws com.meowool.mio.channel.ChannelEmptyException;
+    method public byte[]? popAllBytesOrNull();
+    method public default String? popAllOrNull(optional error.NonExistentClass charset);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public default boolean popBoolean(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public default Boolean? popBooleanOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public byte[] popBytes(int count, optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public byte[]? popBytesOrNull(int count, optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public char popChar(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Character? popCharOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public double popDouble(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Double? popDoubleOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public float popFloat(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Float? popFloatOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public int popInt(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Integer? popIntOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public byte popLeft(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public default boolean popLeftBoolean(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public default Boolean? popLeftBooleanOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public byte[] popLeftBytes(int count, optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public byte[]? popLeftBytesOrNull(int count, optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public char popLeftChar(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Character? popLeftCharOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public double popLeftDouble(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Double? popLeftDoubleOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public float popLeftFloat(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Float? popLeftFloatOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public int popLeftInt(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Integer? popLeftIntOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public default String popLeftLine(optional long index, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public byte[] popLeftLineBytes(optional long index) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class}) public byte[]? popLeftLineBytesOrNull(optional long index) throws com.meowool.mio.channel.ChannelEmptyException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class}) public default String? popLeftLineOrNull(optional long index, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelEmptyException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public long popLeftLong(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Long? popLeftLongOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Byte? popLeftOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public short popLeftShort(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Short? popLeftShortOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public default String popLeftString(int count, optional long index, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public default String? popLeftStringOrNull(int count, optional long index, optional error.NonExistentClass charset);
+    method public default int popLeftUInt(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public default String popLine(optional long index, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public byte[] popLineBytes(optional long index) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class}) public byte[]? popLineBytesOrNull(optional long index) throws com.meowool.mio.channel.ChannelEmptyException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class}) public default String? popLineOrNull(optional long index, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelEmptyException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public long popLong(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Long? popLongOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Byte? popOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, IllegalArgumentException::class}) public default String popRange(optional long startIndex, optional long endIndex, optional error.NonExistentClass charset);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, IllegalArgumentException::class}) public byte[] popRangeBytes(optional long startIndex, optional long endIndex);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public short popShort(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public Short? popShortOrNull(optional long index);
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public default String popString(int count, optional long index, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses=IndexOutOfBoundsException::class) public default String? popStringOrNull(int count, optional long index, optional error.NonExistentClass charset);
+    method public default int popUInt(optional long index);
+  }
+
+  public interface FileChannel<File extends com.meowool.mio.IFile<?>> extends com.meowool.mio.channel.DataChannel {
+    method public File getFile();
+    property public abstract File file;
+  }
+
+  public interface InsertableDataChannel extends com.meowool.mio.channel.DataChannelInfo {
+    method public void push(byte byte, optional int index);
+  }
+
+  public interface ReadableDataChannel extends com.meowool.mio.channel.DataChannelInfo {
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class}) public default operator byte get(long index) throws com.meowool.mio.channel.ChannelUnderflowException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public byte peek(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, OutOfMemoryError::class, ClosedChannelException::class, IOException::class}) public default String peekAll(optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ClosedChannelException, com.meowool.mio.OutOfMemoryError;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, OutOfMemoryError::class, ClosedChannelException::class, IOException::class}) public byte[] peekAllBytes() throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ClosedChannelException, com.meowool.mio.OutOfMemoryError;
+    method @kotlin.jvm.Throws(exceptionClasses={OutOfMemoryError::class, ClosedChannelException::class, IOException::class}) public byte[]? peekAllBytesOrNull() throws com.meowool.mio.channel.ClosedChannelException, com.meowool.mio.OutOfMemoryError;
+    method @kotlin.jvm.Throws(exceptionClasses={OutOfMemoryError::class, ClosedChannelException::class, IOException::class}) public default String? peekAllOrNull(optional error.NonExistentClass charset) throws com.meowool.mio.channel.ClosedChannelException, com.meowool.mio.OutOfMemoryError;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default boolean peekBoolean(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default Boolean? peekBooleanOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public byte[] peekBytes(long index, int count) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default byte[] peekBytes(int count) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public byte[]? peekBytesOrNull(long index, int count) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ClosedChannelException::class, IOException::class}) public default byte[]? peekBytesOrNull(int count) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public char peekChar(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public Character? peekCharOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public double peekDouble(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public Double? peekDoubleOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public float peekFloat(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public Float? peekFloatOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public int peekInt(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public Integer? peekIntOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default byte peekLeft(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default boolean peekLeftBoolean(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default Boolean? peekLeftBooleanOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default byte[] peekLeftBytes(long index, int count) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default byte[] peekLeftBytes(int count) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default byte[]? peekLeftBytesOrNull(long index, int count) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ClosedChannelException::class, IOException::class}) public default byte[]? peekLeftBytesOrNull(int count) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default char peekLeftChar(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default Character? peekLeftCharOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default double peekLeftDouble(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default Double? peekLeftDoubleOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default float peekLeftFloat(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default Float? peekLeftFloatOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default int peekLeftInt(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default Integer? peekLeftIntOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default String peekLeftLine(optional long index, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public byte[] peekLeftLineBytes(optional long index) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public byte[]? peekLeftLineBytesOrNull(optional long index) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default String? peekLeftLineOrNull(optional long index, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default long peekLeftLong(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default Long? peekLeftLongOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default Byte? peekLeftOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default short peekLeftShort(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default Short? peekLeftShortOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default String peekLeftString(long index, int count, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default String peekLeftString(int count, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default String? peekLeftStringOrNull(long index, int count, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ClosedChannelException::class, IOException::class}) public default String? peekLeftStringOrNull(int count, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default String peekLine(optional long index, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public byte[] peekLineBytes(optional long index) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public byte[]? peekLineBytesOrNull(optional long index) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelEmptyException::class, IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default String? peekLineOrNull(optional long index, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelEmptyException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public long peekLong(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public Long? peekLongOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public Byte? peekOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, IllegalArgumentException::class, OutOfMemoryError::class, ClosedChannelException::class, IOException::class}) public default String peekRange(long startIndex, long endIndex, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ClosedChannelException, com.meowool.mio.OutOfMemoryError;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, IllegalArgumentException::class, OutOfMemoryError::class, ClosedChannelException::class, IOException::class}) public default byte[] peekRangeBytes(long startIndex, long endIndex) throws com.meowool.mio.channel.ClosedChannelException, com.meowool.mio.OutOfMemoryError;
+    method @kotlin.jvm.Throws(exceptionClasses={OutOfMemoryError::class, ClosedChannelException::class, IOException::class}) public default String peekRemaining(optional error.NonExistentClass charset) throws com.meowool.mio.channel.ClosedChannelException, com.meowool.mio.OutOfMemoryError;
+    method @kotlin.jvm.Throws(exceptionClasses={OutOfMemoryError::class, ClosedChannelException::class, IOException::class}) public default byte[] peekRemainingBytes() throws com.meowool.mio.channel.ClosedChannelException, com.meowool.mio.OutOfMemoryError;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public short peekShort(optional long index) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public Short? peekShortOrNull(optional long index) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default String peekString(long index, int count, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ChannelUnderflowException::class, ClosedChannelException::class, IOException::class}) public default String peekString(int count, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ChannelUnderflowException, com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={IndexOutOfBoundsException::class, ClosedChannelException::class, IOException::class}) public default String? peekStringOrNull(long index, int count, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ClosedChannelException;
+    method @kotlin.jvm.Throws(exceptionClasses={ClosedChannelException::class, IOException::class}) public default String? peekStringOrNull(int count, optional error.NonExistentClass charset) throws com.meowool.mio.channel.ClosedChannelException;
+    method public default int peekUInt(optional long index);
+    method public default short peekUShort(optional long index);
+  }
+
+  public interface WriteableDataChannel extends com.meowool.mio.channel.DataChannelInfo {
+    method public void amend(byte byte);
+    method public void amend(long index, byte byte);
+    method public operator void set(optional long index, byte byte);
+  }
+
+}
+
+package com.meowool.mio.internal {
+
+  public final class BigByteArraysKt {
+    method public static long getSizeTotal(byte[]![]);
+  }
+
+  public final class CommonUtilsKt {
+  }
+
+  public final class DataChannelImpl {
+    ctor public DataChannelImpl(error.NonExistentClass nioChannel);
+    method public void clear();
+    method public void close();
+    method public void dropAt(long index);
+    method public void dropChar();
+    method public void dropDouble();
+    method public void dropFloat();
+    method public void dropInt();
+    method public void dropLastChar();
+    method public void dropLastDouble();
+    method public void dropLastFloat();
+    method public void dropLastInt();
+    method public void dropLastLine();
+    method public void dropLastLong();
+    method public void dropLastShort();
+    method public void dropLine();
+    method public void dropLong();
+    method public void dropRange(long startIndex, long endIndex);
+    method public void dropShort();
+    method public void flush();
+    method public error.NonExistentClass! getEndCursor();
+    method public com.meowool.mio.Endianness getOrder();
+    method public long getSize();
+    method public error.NonExistentClass! getStartCursor();
+    method public boolean isOpen();
+    method public byte peek();
+    method public byte[] peekAllBytes();
+    method public byte[]? peekAllBytesOrNull();
+    method public byte peekAt(long index);
+    method public char peekChar();
+    method public double peekDouble();
+    method public float peekFloat();
+    method public int peekInt();
+    method public byte peekLast();
+    method public char peekLastChar();
+    method public double peekLastDouble();
+    method public float peekLastFloat();
+    method public int peekLastInt();
+    method public byte[] peekLastLineBytes();
+    method public byte[]? peekLastLineBytesOrNull();
+    method public long peekLastLong();
+    method public short peekLastShort();
+    method public byte[] peekLineBytes();
+    method public byte[]? peekLineBytesOrNull();
+    method public long peekLong();
+    method public byte[] peekRangeBytes(long startIndex, long endIndex);
+    method public short peekShort();
+    method public byte[] popAllBytes();
+    method public byte[]? popAllBytesOrNull();
+    method public byte popAt(long index);
+    method public char popChar();
+    method public double popDouble();
+    method public float popFloat();
+    method public int popInt();
+    method public char popLastChar();
+    method public double popLastDouble();
+    method public float popLastFloat();
+    method public int popLastInt();
+    method public byte[] popLastLineBytes();
+    method public byte[]? popLastLineBytesOrNull();
+    method public long popLastLong();
+    method public short popLastShort();
+    method public byte[] popLineBytes();
+    method public byte[]? popLineBytesOrNull();
+    method public long popLong();
+    method public byte[] popRangeBytes(long startIndex, long endIndex);
+    method public short popShort();
+    method public void push(byte byte);
+    method public void push(short short);
+    method public void push(int int);
+    method public void push(long long);
+    method public void push(float float);
+    method public void push(double double);
+    method public void push(char char);
+    method public void pushLast(byte byte);
+    method public void pushLast(short short);
+    method public void pushLast(int int);
+    method public void pushLast(long long);
+    method public void pushLast(float float);
+    method public void pushLast(double double);
+    method public void pushLast(char char);
+    method public void pushTo(long index, byte byte);
+    method public void pushTo(long index, byte[] src, int cutStartIndex, int cutEndIndex);
+    method public void pushTo(long index, short short);
+    method public void pushTo(long index, int int);
+    method public void pushTo(long index, long long);
+    method public void pushTo(long index, float float);
+    method public void pushTo(long index, double double);
+    method public void pushTo(long index, char char);
+    method public void replace(long index, byte byte);
+    method public void setOrder(com.meowool.mio.Endianness order);
+    method public void setSize(long value);
+    property public error.NonExistentClass! endCursor;
+    property public com.meowool.mio.Endianness order;
+    property public long size;
+    property public error.NonExistentClass! startCursor;
+    field public static final byte CR = 13; // 0xd
+    field public static final com.meowool.mio.internal.DataChannelImpl.Companion Companion;
+    field public static final byte LF = 10; // 0xa
+  }
+
+  public static final class DataChannelImpl.Companion {
+  }
+
+  public final class DataChannelImpl.CursorImpl {
+    ctor public DataChannelImpl.CursorImpl(long index);
+    method public long getIndex();
+    method public boolean isReachEnd();
+    method public boolean isReachStart();
+    method public error.NonExistentClass! moveDown(int repeat);
+    method public error.NonExistentClass! moveUp(int repeat);
+    method public error.NonExistentClass! remember();
+    method public error.NonExistentClass! restore();
+    method public void setIndex(long index);
+    property public long index;
+    property public boolean isReachEnd;
+    property public boolean isReachStart;
+  }
+
+  public final class HelperKt {
+  }
+
+  public final class MioCaches_jvmKt {
+  }
+
+  public final class MioCaches_sharedKt {
+  }
+
+  public final class PathUtilsKt {
+  }
+
+  public final class PathUtils_jvmKt {
+  }
+
+  public final class StreamFlowKt {
+  }
+
+}
+
+package com.meowool.sweekt {
+
+  public final class SynchronizedLegacy_jvmKt {
+    method public static inline <R> R! synchronized(Object, Object lock, kotlin.jvm.functions.Function0<? extends R> block);
+  }
+
+}
+
+package com.meowool.sweekt.array {
+
+  public final class ByteArray_internalKt {
+  }
+
+}
+

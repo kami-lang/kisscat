@@ -1,14 +1,14 @@
 package com.meowool.kisscat
 
 import com.meowool.sweekt.LazyInit
-import com.meowool.sweekt.SuspendGetter
+import com.meowool.sweekt.Suspend
 
 /**
  * Represents a parsed dalvik executable file. (Usually `.dex` extension)
  *
  * [Reference](https://source.android.com/devices/tech/dalvik/dex-format#file-layout)
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface Dex {
 
@@ -30,7 +30,7 @@ public interface Dex {
    *
    * It may be literals or types or something...
    */
-  @SuspendGetter
+  @Suspend
   public val strings: MutableSet<String>
 
   /**
@@ -39,13 +39,13 @@ public interface Dex {
    * Note that this value is not equal to [classes], it includes all referenced types (regardless of whether there is a
    * corresponding [Class], such as the referenced system class)
    */
-  @SuspendGetter
+  @Suspend
   public val types: MutableSet<Type>
 
   /**
    * All classes declaration in this dex file.
    */
-  @SuspendGetter
+  @Suspend
   public val classes: MutableSet<Class>
 
   /**
@@ -60,7 +60,7 @@ public interface Dex {
    * [Reference](https://source.android.com/devices/tech/dalvik/dex-format#header-item)
    *
    * @see Header.Empty
-   * @author 凛 (https://github.com/RinOrz)
+   * @author 凛 (RinOrz)
    */
   public interface Header {
 
@@ -73,14 +73,14 @@ public interface Dex {
      * The adler32 checksum of the dex file.
      * Usually used to detect file corruption.
      */
-    @SuspendGetter
+    @Suspend
     public val checksum: UInt
 
     /**
      * The SHA-1 signature (hash) of the dex file.
      * Usually used to uniquely identify file.
      */
-    @SuspendGetter
+    @Suspend
     public val signature: ByteArray
 
 
@@ -89,7 +89,7 @@ public interface Dex {
      *
      * This is usually the default value of [Dex.header] for a new [Dex] instance.
      *
-     * @author 凛 (https://github.com/RinOrz)
+     * @author 凛 (RinOrz)
      */
     public companion object Empty : Header {
       override val version: Int = 0

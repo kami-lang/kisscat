@@ -4,7 +4,7 @@ import com.meowool.mio.channel.ByteOrder
 import com.meowool.sweekt.letOrNull
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 internal interface DataBuffer<S : DataBuffer<S>> {
   val size: Long

@@ -3,7 +3,7 @@ import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 class PathJoinTests: StringSpec({
   val home = Path("/home")

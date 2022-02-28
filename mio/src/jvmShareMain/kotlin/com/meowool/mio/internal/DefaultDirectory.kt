@@ -36,7 +36,7 @@ import kotlin.streams.toList
 /**
  * The directory backend implement with [NioPath].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @PublishedApi
 internal open class DefaultDirectory(path: NioPath) : Directory, DefaultPath(path) {

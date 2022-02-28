@@ -7,7 +7,7 @@ package com.meowool.mio
  *
  * @see IZipEntry.isDirectory
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface ZipDirectoryEntry : IDirectory<ZipDirectoryEntry>, IZipEntry<ZipDirectoryEntry>
 

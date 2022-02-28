@@ -11,7 +11,7 @@ import java.nio.file.Files
 /**
  * The zip entry backend implement with [NioPath].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @PublishedApi
 internal class DefaultZipEntryNew(

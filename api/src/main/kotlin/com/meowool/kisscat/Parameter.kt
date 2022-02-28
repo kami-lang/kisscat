@@ -3,7 +3,7 @@ package com.meowool.kisscat
 /**
  * Represents the definition of a formal-parameter.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface Parameter {
 

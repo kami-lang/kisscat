@@ -31,7 +31,7 @@ import kotlin.streams.toList
 /**
  * The zip backend implement with [NioPath].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 internal class DefaultZipNew(zipPath: NioPath) : Zip, DefaultFile(zipPath) {
   private val url = URI.create("jar:file:$nioPath")

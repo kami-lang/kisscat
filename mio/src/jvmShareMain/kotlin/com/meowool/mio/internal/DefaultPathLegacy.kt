@@ -31,7 +31,7 @@ import java.net.URLConnection
 /**
  * The path backend implement with [IoFile].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @PublishedApi
 internal open class DefaultPathLegacy(final override var ioFile: IoFile) : IPath, IoFileBackend {

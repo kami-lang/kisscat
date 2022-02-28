@@ -50,7 +50,7 @@ import kotlin.io.path.writeText
 /**
  * The file backend implement with [NioPath].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @PublishedApi
 internal open class DefaultFile(path: NioPath) : IFile, DefaultPath(path) {

@@ -6,7 +6,7 @@ package com.meowool.mio.channel
  * This interface provides the ability to insert data randomly, through the [cursor] can directly
  * insert the data at the beginning, at the middle, and even at the end of the channel.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface InsertableDataChannel : DataChannelInfo {
 

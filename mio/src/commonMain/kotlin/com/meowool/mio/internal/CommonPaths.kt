@@ -17,7 +17,7 @@ import kotlin.jvm.Volatile
 /**
  * A common pure path backend, no need to rely on any file system implementation.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 internal abstract class CommonPath<Self : IPath<Self>>(private var chars: CharSequence) :
   IPath<Self> {

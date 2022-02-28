@@ -19,7 +19,7 @@ import java.util.zip.Deflater
 import kotlin.io.path.getLastModifiedTime
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 open class JvmDirectoryTests : FreeSpec({
   "native test" {

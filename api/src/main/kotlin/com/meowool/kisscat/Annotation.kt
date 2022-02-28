@@ -3,7 +3,7 @@ package com.meowool.kisscat
 /**
  * Represents an annotation applied to [Member].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface Annotation {
 

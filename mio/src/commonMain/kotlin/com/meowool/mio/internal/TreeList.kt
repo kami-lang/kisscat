@@ -9,7 +9,7 @@ import kotlin.math.max
  *
  * Modified from [Apache commons-collection](https://github.com/apache/commons-collections/blob/master/src/main/java/org/apache/commons/collections4/list/TreeList.java).
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 internal class TreeList<E> {
   /** The root node in the AVL tree  */

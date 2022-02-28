@@ -8,7 +8,7 @@ import com.meowool.mio.ChannelUnderflowException
  * This interface provides the ability to write data randomly, through the [cursor] can directly
  * write the data at the beginning, at the middle, and even at the end of the channel.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface WriteableDataChannel : DataChannelInfo {
 

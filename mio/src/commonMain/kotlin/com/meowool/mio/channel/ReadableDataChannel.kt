@@ -14,7 +14,7 @@ import com.meowool.mio.toString
  * This interface provides the ability to access data randomly, through the [cursor] can directly
  * access the data at the beginning, at the middle, and even at the end of the channel.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface ReadableDataChannel : DataChannelInfo {
 

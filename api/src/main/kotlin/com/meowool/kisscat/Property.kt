@@ -3,7 +3,7 @@ package com.meowool.kisscat
 /**
  * Represents a property, which is a member of the [Class] structure.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface Property : Member<Class> {
 
@@ -75,7 +75,7 @@ public interface Property : Member<Class> {
   /**
    * Represents a function that access or control the value of a [associated] property.
    *
-   * @author 凛 (https://github.com/RinOrz)
+   * @author 凛 (RinOrz)
    */
   public interface Accessor : Function {
 

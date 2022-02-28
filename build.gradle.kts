@@ -6,7 +6,7 @@ publication.data {
 
   displayName = "Kisscat"
   artifactId = "kisscat"
-  groupId = "com.meowool.kisscat"
+  groupId = "com.meowool.kami"
   description = "A common toolkit (utils) built to help you further reduce Kotlin boilerplate code and improve development efficiency."
   url = "https://github.com/kami-lang/${rootProject.name}"
   vcs = "$url.git"

@@ -26,7 +26,7 @@ import kotlin.io.path.writeBytes
 /**
  * The file backend implement with [NioPath].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 internal abstract class TypedFileImpl<Self : IFile<Self>>(chars: CharSequence) :
   IFile<Self>, PathImpl<Self>(chars) {

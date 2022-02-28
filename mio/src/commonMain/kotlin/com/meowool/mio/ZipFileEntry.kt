@@ -7,7 +7,7 @@ package com.meowool.mio
  *
  * @see IZipEntry.isRegularFile
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface ZipFileEntry : IFile<ZipFileEntry>, IZipEntry<ZipFileEntry>
 

@@ -3,7 +3,7 @@ package com.meowool.kisscat
 /**
  * Represents a member belonging to [T]
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface Member<T> {
 

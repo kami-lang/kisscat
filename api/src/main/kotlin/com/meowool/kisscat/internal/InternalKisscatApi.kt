@@ -3,7 +3,7 @@ package com.meowool.kisscat.internal
 /**
  * Used to mark APIs that are not available externally.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @RequiresOptIn(
   level = RequiresOptIn.Level.ERROR,

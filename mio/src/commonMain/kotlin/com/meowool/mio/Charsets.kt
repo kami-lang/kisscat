@@ -6,7 +6,7 @@ package com.meowool.mio
 /**
  * Constant definitions for the standard [charsets][Charset].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 object Charsets {
   /**

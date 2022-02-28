@@ -3,7 +3,7 @@ package com.meowool.mio
 /**
  * For the definition of different compression levels, the compression ratio depends on [level].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 sealed class CompressionLevel(val level: Int) {
 

@@ -5,7 +5,7 @@ package com.meowool.mio
  * Usually a data channel.
  *
  * @see DataChannel
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface Flushable {
 

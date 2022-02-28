@@ -6,7 +6,7 @@ import io.kotest.core.spec.style.FreeSpec
 import okio.use
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 class ZipBackendTests : FreeSpec({
   "generates" - {

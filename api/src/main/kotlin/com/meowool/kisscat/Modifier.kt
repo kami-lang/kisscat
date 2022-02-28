@@ -9,7 +9,7 @@ import com.meowool.kisscat.internal.ModifierApplicable
  * [Jvm reference](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html)
  *
  * @param applicable Member class types to which modifiers apply, see [ModifierApplicable].
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public enum class Modifier(public val applicable: Int) {
 

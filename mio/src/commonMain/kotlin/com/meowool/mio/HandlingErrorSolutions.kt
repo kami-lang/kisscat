@@ -3,7 +3,7 @@ package com.meowool.mio
 /**
  * Represents the solution taken when an error occurs during the handling of the paths.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 enum class PathHandlingErrorSolution {
   /** Skip handling this file and go to the next. */

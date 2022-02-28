@@ -27,7 +27,7 @@ import java.util.zip.ZipOutputStream
 import kotlin.system.measureNanoTime
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 class JvmOldZipTests : FreeSpec({
   val zip = ZipFile(javaClass.getResource("zip-test.zip")!!.path)

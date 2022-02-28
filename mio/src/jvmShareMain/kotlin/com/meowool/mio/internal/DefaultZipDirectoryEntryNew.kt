@@ -12,7 +12,7 @@ import java.nio.file.Files
 /**
  * The zip file entry backend implement with [IoFile].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @PublishedApi
 internal class DefaultZipDirectoryEntryNew(

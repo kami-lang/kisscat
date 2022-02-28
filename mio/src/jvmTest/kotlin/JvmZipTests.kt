@@ -36,7 +36,7 @@ import kotlin.streams.toList
 import kotlin.system.measureNanoTime
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 class JvmZipTests : FreeSpec({
   val uri = URI.create("jar:file:${javaClass.getResource("zip-test.zip")!!.path}")

@@ -12,7 +12,7 @@ import java.nio.ByteBuffer
 import java.nio.channels.SeekableByteChannel
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 class DataChannelImpl(
   private val nioChannel: SeekableByteChannel,

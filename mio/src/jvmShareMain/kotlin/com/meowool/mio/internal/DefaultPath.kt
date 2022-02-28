@@ -37,7 +37,7 @@ import kotlin.io.path.exists
 /**
  * The path backend implement with [NioPath].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @PublishedApi
 internal open class DefaultPath(final override var nioPath: NioPath) : IPath, NioPathBackend {

@@ -9,7 +9,7 @@ package com.meowool.kisscat
  * @see kotlin.reflect.KClass
  * @see java.lang.Class
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface Class {
 

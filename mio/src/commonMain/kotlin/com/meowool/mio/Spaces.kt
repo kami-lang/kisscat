@@ -8,7 +8,7 @@ package com.meowool.mio
  * Generally, it is used to mean the space of the file block, such as obtaining the size of
  * the android internal storage space.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 expect val IPath.blockSpace: Long
 

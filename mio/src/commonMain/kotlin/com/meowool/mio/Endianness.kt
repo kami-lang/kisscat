@@ -5,7 +5,7 @@ package com.meowool.mio
  *
  * [Reference](https://en.wikipedia.org/wiki/Endianness)
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 enum class Endianness {
 

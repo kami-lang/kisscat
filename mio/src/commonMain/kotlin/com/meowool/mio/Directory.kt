@@ -8,7 +8,7 @@ package com.meowool.mio
  * An object representing the directory in the file system and its path.
  *
  * @param Self represents the return type of members (directory, zip, etc...)
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface IDirectory<Self : IDirectory<Self>> : IPathGroup<Self, Path, File, Directory> {
 

@@ -9,7 +9,7 @@ package com.meowool.mio
  *
  * @see IPath.contentType
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 sealed class MediaType(val value: List<String>) {
   constructor(vararg values: String) : this(values.toList())

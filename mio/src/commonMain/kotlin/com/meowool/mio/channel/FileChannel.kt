@@ -10,7 +10,7 @@ import com.meowool.mio.File as AnyFile
  * the buffer. Only after calling [flush] or [close] will all changes in the buffer be synchronized
  * to the real file.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface FileChannel<File: AnyFile> : DataChannel {
 

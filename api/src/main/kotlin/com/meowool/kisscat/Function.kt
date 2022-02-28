@@ -3,7 +3,7 @@ package com.meowool.kisscat
 /**
  * Represents a function, which is a member of the [Class] structure.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface Function : Member<Class> {
 

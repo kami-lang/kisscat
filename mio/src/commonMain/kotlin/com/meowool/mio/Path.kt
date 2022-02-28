@@ -12,7 +12,7 @@ import com.meowool.sweekt.toReadableSize
  * [Implement reference python os.path](https://github.com/python/cpython/blob/3.9/Lib/posixpath.py)
  *
  * @param Self represents the return type of members (file, directory, etc...)
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface IPath<Self: IPath<Self>> : Comparable<Self> {
 

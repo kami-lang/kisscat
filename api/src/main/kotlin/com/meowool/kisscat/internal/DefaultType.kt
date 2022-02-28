@@ -12,7 +12,7 @@ import com.meowool.sweekt.toJvmTypeSimpleName
 /**
  * Common type object implementation.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public class DefaultType(
   override val descriptor: String,

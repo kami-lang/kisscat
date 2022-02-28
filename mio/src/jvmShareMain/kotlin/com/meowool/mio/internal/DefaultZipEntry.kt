@@ -23,7 +23,7 @@ import java.nio.file.attribute.FileTime
 import kotlin.io.path.exists
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 internal open class DefaultZipEntry(
   override val holder: DefaultZip,

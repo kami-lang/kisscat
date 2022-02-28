@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
  * An object representing the file in the file system and its path.
  *
  * @param Self represents the return type of members (zip, zip file entry, etc...)
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface IFile<Self: IFile<Self>> : IPath<Self> {
 

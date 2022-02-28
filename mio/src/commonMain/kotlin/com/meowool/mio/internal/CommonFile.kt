@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 internal abstract class CommonFile<Self : IFile<Self>>(chars: CharSequence) :
   IFile<Self>, CommonPath<Self>(chars) {

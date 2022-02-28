@@ -19,7 +19,7 @@ import kotlinx.coroutines.flow.toList
 import kotlin.io.path.exists
 
 /**
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 class ZipTests : StringSpec({
   val builtin = Zip(javaClass.getResource("zip-test.zip")!!.path)

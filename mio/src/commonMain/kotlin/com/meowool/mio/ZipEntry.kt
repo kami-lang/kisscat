@@ -12,7 +12,7 @@ typealias ZipEntry = IZipEntry<*>
  * The interface represents to the entry in the zip archive.
  *
  * @param Self represents the return type of members (file entry, directory entry)
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface IZipEntry<Self: IZipEntry<Self>> : IPath<Self> {
 

@@ -20,7 +20,7 @@ import okio.use
  *
  * @param charset character set to use.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 actual fun Source.readText(charset: Charset): String = buffered.use {
   if (charset == Charsets.UTF_8) it.readUtf8() else it.readByteString().string(charset)

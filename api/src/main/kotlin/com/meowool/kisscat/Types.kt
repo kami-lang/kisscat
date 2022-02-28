@@ -41,7 +41,7 @@ import com.meowool.sweekt.LazyInit
 /**
  * Represents a type in the JVM programming language or Dalvik system.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface Type {
 
@@ -109,7 +109,7 @@ public interface Type {
   /**
    * Built-in common [Type]s.
    *
-   * @author 凛 (https://github.com/RinOrz)
+   * @author 凛 (RinOrz)
    */
   @Suppress("SpellCheckingInspection")
   public companion object BuiltIns {
@@ -206,7 +206,7 @@ public interface Type {
      * Dalvik's system annotation types.
      * [Reference](https://source.android.com/devices/tech/dalvik/dex-format#system-annotation)
      *
-     * @author 凛 (https://github.com/RinOrz)
+     * @author 凛 (RinOrz)
      */
     public object Dalvik {
       @LazyInit public val AnnotationDefault: Type = Type("Ldalvik/annotation/AnnotationDefault;")
@@ -223,7 +223,7 @@ public interface Type {
     /**
      * Android platform common types.
      *
-     * @author 凛 (https://github.com/RinOrz)
+     * @author 凛 (RinOrz)
      */
     public object Android {
       @LazyInit public val View: Type = Type("Landroid/view/View;")
@@ -393,7 +393,7 @@ public inline val Type.isClass: Boolean
 /**
  * Built-in common [Type]s.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public typealias BuiltInTypes = BuiltIns
 
@@ -401,7 +401,7 @@ public typealias BuiltInTypes = BuiltIns
 /**
  * Represents the kind of type.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public enum class TypeKind {
   Class,

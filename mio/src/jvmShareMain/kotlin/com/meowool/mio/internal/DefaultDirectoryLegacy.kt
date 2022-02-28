@@ -26,7 +26,7 @@ import kotlinx.coroutines.flow.asFlow
 /**
  * The directory backend implement with [NioPath].
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @PublishedApi
 internal class DefaultDirectoryLegacy(path: IoFile) : Directory, DefaultPathLegacy(path) {

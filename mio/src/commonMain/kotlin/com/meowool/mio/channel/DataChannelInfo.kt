@@ -3,7 +3,7 @@ package com.meowool.mio.channel
 /**
  * Abstract the most basic information of a data channel.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface DataChannelInfo {
 

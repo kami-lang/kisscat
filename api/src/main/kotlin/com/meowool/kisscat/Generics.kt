@@ -15,7 +15,7 @@ package com.meowool.kisscat
  * <S, R> void a() { ... }
  * ```
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface GenericParameter {
 
@@ -70,7 +70,7 @@ public interface GenericParameter {
  *
  * @see Type.arguments
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 public interface GenericArgument : Type {
   /** 这个泛型的型变 */

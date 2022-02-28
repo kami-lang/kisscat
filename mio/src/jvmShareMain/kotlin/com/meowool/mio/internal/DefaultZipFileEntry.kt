@@ -26,7 +26,7 @@ import okio.use
 /**
  * The zip file entry backend implemented by default.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 @PublishedApi
 internal class DefaultZipFileEntry(

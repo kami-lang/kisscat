@@ -12,7 +12,7 @@ import com.meowool.mio.IOException
  * the buffer. Only after calling [flush] or [close] will all changes in the buffer be synchronized
  * to the final destination.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 interface DataChannel :
   Flushable, Closeable,

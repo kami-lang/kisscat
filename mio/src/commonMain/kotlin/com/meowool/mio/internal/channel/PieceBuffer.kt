@@ -13,7 +13,7 @@ import com.meowool.sweekt.throwIf
  * The high-performance implementation based on the [PieceTable](https://en.wikipedia.org/wiki/Piece_table) of
  * insertable and deletable data buffer.
  *
- * @author 凛 (https://github.com/RinOrz)
+ * @author 凛 (RinOrz)
  */
 internal class PieceBuffer(private val raw: DataBuffer<*>) : MutableDataBuffer<PieceBuffer> {
 

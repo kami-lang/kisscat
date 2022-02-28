@@ -17,7 +17,7 @@
 // *
 // * @param charset character set to use.
 // *
-// * @author 凛 (https://github.com/RinOrz)
+// * @author 凛 (RinOrz)
 // */
 //expect fun Source.readText(charset: Charset = Charsets.UTF_8): String
 //
